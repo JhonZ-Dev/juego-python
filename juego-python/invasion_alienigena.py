@@ -10,14 +10,14 @@ def run_game():
     pygame.display.set_caption("Invasion alienigena");
     
     #color de fondo
-    bg_color = ai_configuraciones.bg_color;
+
     while True:
         #bucle de animación del juego
         #eventos y juegos por ejemplo mover el raton, etc
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
-        pantalla.fill(bg_color)  #aqui se establece el fondo de la pantalla durante cada pasada por el bucle 
+        pantalla.fill(ai_configuraciones.bg_color)  #aqui se establece el fondo de la pantalla durante cada pasada por el bucle 
         pygame.display.flip() #haga visible una pantalla mas reciente
         
 run_game()            
