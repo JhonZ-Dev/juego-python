@@ -10,6 +10,9 @@ def run_game():
     pantalla = pygame.display.set_mode((ai_configuraciones.screen_width,ai_configuraciones.screen_height)) #crear ventana de visualización
     pygame.display.set_caption("Invasion alienigena");
     
+    #crea la nave
+    nave = Nave(pantalla)
+    
     #color de fondo
 
     while True:
@@ -19,6 +22,7 @@ def run_game():
             if event.type == pygame.QUIT:
                 sys.exit()
         pantalla.fill(ai_configuraciones.bg_color)  #aqui se establece el fondo de la pantalla durante cada pasada por el bucle 
+        nave.blitme()
         pygame.display.flip() #haga visible una pantalla mas reciente
         
 run_game()            
