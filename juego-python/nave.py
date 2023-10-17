@@ -14,6 +14,6 @@ class Nave():
         self.rect.centerx = self.pantalla_rect.centerx
         self.rect.bottom = self.pantalla_rect.bottom
         
-        def blitme(self):
-            """Dibuja la nave en su ubicacion actua"""
-            self.pantalla.blit(self.image, self.rect)
+    def blitme(self):
+        """Dibuja la nave en su ubicacion actua"""
+        self.pantalla.blit(self.imagen, self.rect)
