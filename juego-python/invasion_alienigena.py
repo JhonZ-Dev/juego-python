@@ -1,6 +1,7 @@
 import sys #salir del jeugo
 import pygame #crear el juego
 from configuraciones import Configuraciones
+from nave import Nave
 
 
 def run_game():
