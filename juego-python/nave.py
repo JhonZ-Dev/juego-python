@@ -12,3 +12,4 @@ class Nave():
         
         #empieza la nave en la parte inferior de la pantalla
         self.rect.centerx = self.pantalla_rect.centerx
+        self.rect.bottom = self.pantalla_rect.bottom
