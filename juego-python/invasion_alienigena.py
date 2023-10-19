@@ -1,8 +1,8 @@
-import sys #salir del jeugo
+
 import pygame #crear el juego
 from configuraciones import Configuraciones
 from nave import Nave
-
+import funciones_juego as fj
 
 def run_game():
     pygame.init()
