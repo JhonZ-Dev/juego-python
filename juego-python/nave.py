@@ -24,7 +24,7 @@ class Nave():
         
     def update(self):
         """Actualiza la posicion de la nave segun el valor que tenga la bandera de movimiento"""
-        if self.moving_rigth and self.rect.right < self.pantalla_rect.rigth:
+        if self.moving_rigth and self.rect.right < self.pantalla_rect.right:
             self.center += self.ai_configuraciones.factor_velocidad_nave
             
             
