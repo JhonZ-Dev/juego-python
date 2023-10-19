@@ -14,6 +14,15 @@ class Nave():
         self.rect.centerx = self.pantalla_rect.centerx
         self.rect.bottom = self.pantalla_rect.bottom
         
+        #bandera de movimiento
+        self.moving_rigth = False
+        
+        def update(self):
+            """Actualiza la posicion de la nave segun el valor que tenga la bandera de movimiento"""
+            if self.moving_rigth:
+                self.rect.centerx +=1
+
+
     def blitme(self):
         """Dibuja la nave en su ubicacion actua"""
         self.pantalla.blit(self.imagen, self.rect)
