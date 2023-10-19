@@ -8,7 +8,10 @@ def verificar_eventos(nave):
             sys.exit()
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RIGHT:
-                nave.rect.centerx +=1    
+                nave.moving_rigth=True
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_RIGHT:
+                nave.moving_rigth = False  
 
 def actualizar_pantalla(ai_configuraciones, pantalla, nave):
     """Actualiza las imagenes en la pantalla y pasa a la nueva ventana"""
