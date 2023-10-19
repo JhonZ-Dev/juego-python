@@ -9,8 +9,8 @@ def verificar_eventos(nave):
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RIGHT:
                 nave.moving_rigth=True
-            elif event.type == pygame.K_LEFT:
-                nave.moving_left == True
+            elif event.key == pygame.K_LEFT:
+                nave.moving_left = True
                     
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_RIGHT:

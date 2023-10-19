@@ -21,9 +21,11 @@ class Nave():
     def update(self):
         """Actualiza la posicion de la nave segun el valor que tenga la bandera de movimiento"""
         if self.moving_rigth:
-            self.rect.centerx +=1
+            self.rect.centerx += 1
+            
+            
         if self.moving_left:
-            self.rect.centerx -=1
+            self.rect.centerx -= 1
 
 
     def blitme(self):
