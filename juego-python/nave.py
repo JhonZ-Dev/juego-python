@@ -16,7 +16,7 @@ class Nave():
         self.rect.bottom = self.pantalla_rect.bottom
         
         #almacena un valor decimal para el centro de la nave
-        self.center = float(self.centerx)
+        self.center = float(self.rect.centerx)
         
         #bandera de movimiento
         self.moving_rigth = False
