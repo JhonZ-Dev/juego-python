@@ -18,9 +18,7 @@ def run_game():
     while True:
         #bucle de animación del juego
         #eventos y juegos por ejemplo mover el raton, etc
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
+        fj.verificar_eventos()
         pantalla.fill(ai_configuraciones.bg_color)  #aqui se establece el fondo de la pantalla durante cada pasada por el bucle 
         nave.blitme()
         pygame.display.flip() #haga visible una pantalla mas reciente
