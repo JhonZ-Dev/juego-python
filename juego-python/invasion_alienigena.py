@@ -19,9 +19,7 @@ def run_game():
         #bucle de animación del juego
         #eventos y juegos por ejemplo mover el raton, etc
         fj.verificar_eventos()
-        pantalla.fill(ai_configuraciones.bg_color)  #aqui se establece el fondo de la pantalla durante cada pasada por el bucle 
-        nave.blitme()
-        pygame.display.flip() #haga visible una pantalla mas reciente
+        fj.actualizar_pantalla(ai_configuraciones,pantalla,nave)
         
 run_game()            
 
