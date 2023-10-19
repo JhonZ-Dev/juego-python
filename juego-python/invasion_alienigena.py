@@ -18,7 +18,7 @@ def run_game():
     while True:
         #bucle de animación del juego
         #eventos y juegos por ejemplo mover el raton, etc
-        fj.verificar_eventos()
+        fj.verificar_eventos(nave)
         fj.actualizar_pantalla(ai_configuraciones,pantalla,nave)
         
 run_game()            
