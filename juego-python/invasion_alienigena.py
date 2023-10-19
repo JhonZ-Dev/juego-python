@@ -11,7 +11,7 @@ def run_game():
     pygame.display.set_caption("Invasion alienigena");
     
     #crea la nave
-    nave = Nave(pantalla)
+    nave = Nave(ai_configuraciones,pantalla)
     
     #color de fondo
 
