@@ -1,9 +1,10 @@
 import pygame
 class Nave():
     """Sirve para gestionar el comportamiento de la nave"""
-    def __init__(self,pantalla):
+    def __init__(self,ai_configuraciones,pantalla):
         """Inicializa la nacve y establece la posicion de partida"""
         self.pantalla=pantalla
+        self.ai_configuraciones = ai_configuraciones
         
         #carga la imagen y obtiene su red
         self.imagen=pygame.image.load("image/nave.bmp")
@@ -14,6 +15,9 @@ class Nave():
         self.rect.centerx = self.pantalla_rect.centerx
         self.rect.bottom = self.pantalla_rect.bottom
         
+        #almacena un valor decimal para el centro de la nave
+        self.center = float(self.centerx)
+        
         #bandera de movimiento
         self.moving_rigth = False
         self.moving_left = False
@@ -21,11 +25,13 @@ class Nave():
     def update(self):
         """Actualiza la posicion de la nave segun el valor que tenga la bandera de movimiento"""
         if self.moving_rigth:
-            self.rect.centerx += 1
+            self.center += self.ai_configuraciones.factor_velocidad_nave
             
             
         if self.moving_left:
-            self.rect.centerx -= 1
+            self.center -=self.ai_configuraciones.factor_velocidad_nave
+            
+        self.rect.centerx = self.center
 
 
     def blitme(self):
