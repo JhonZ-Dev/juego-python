@@ -23,11 +23,7 @@ def run_game():
         #eventos y juegos por ejemplo mover el raton, etc
         fj.verificar_eventos(ai_configuraciones,pantalla,nave,balas)
         nave.update()
-        balas.update()
-        #deshace las balas que han desaparecido
-        for bala in balas.copy():
-            if bala.rect.bottom <= 0:
-                balas.remove(bala)
+        fj.update_balas(balas)
         #print(len(balas))
         fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,balas)
         
