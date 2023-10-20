@@ -5,7 +5,7 @@ class Bala(Sprite):
     """Esta clase sirve para manejar las balas disparadas desde la nave.
     """
     def __init__(self, ai_configuraciones,pantalla,nave):
-        super(Bala,self).__init__ ()
+        super(Bala,self).__init__()
         self.pantalla = pantalla
         #crea una bala
         self.rect = pygame.Rect(0,0,ai_configuraciones.bala_width,ai_configuraciones.bala_height)

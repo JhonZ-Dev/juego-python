@@ -1,7 +1,7 @@
 import sys
 import pygame
 from bala import Bala
-def verificar_eventos_keydown(event,ai_configuraciones,pantalla, nave,balas):
+def verificar_eventos_keydown(event,ai_configuraciones, pantalla, nave,balas):
     """Responde a los pulsaciones de teclas"""
     if event.key == pygame.K_RIGHT:
         nave.moving_rigth=True
