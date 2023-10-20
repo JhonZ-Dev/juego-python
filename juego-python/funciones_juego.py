@@ -9,8 +9,11 @@ def verificar_eventos_keydown(event,ai_configuraciones, pantalla, nave,balas):
         nave.moving_left = True
     elif event.key == pygame.K_SPACE:
         #crea una nueva bala y la agrega
-        nueva_bala = Bala(ai_configuraciones,pantalla,nave)
-        balas.add(nueva_bala)
+        if len(balas) < ai_configuraciones.balas_allowed:
+            nueva_bala = Bala(ai_configuraciones,pantalla,nave)
+            balas.add(nueva_bala)
+            
+        
         
         
 def verificar_eventos_keyup(event,nave):
