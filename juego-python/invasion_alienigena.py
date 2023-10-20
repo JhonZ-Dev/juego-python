@@ -28,7 +28,7 @@ def run_game():
         for bala in balas.copy():
             if bala.rect.bottom <= 0:
                 balas.remove(bala)
-        print(len(balas))
+        #print(len(balas))
         fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,balas)
         
 run_game()            
