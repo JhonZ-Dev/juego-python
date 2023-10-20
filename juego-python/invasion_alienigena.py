@@ -1,5 +1,6 @@
 
 import pygame #crear el juego
+from pygame.sprite import Group
 from configuraciones import Configuraciones
 from nave import Nave
 import funciones_juego as fj
