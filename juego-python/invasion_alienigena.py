@@ -13,15 +13,18 @@ def run_game():
     
     #crea la nave
     nave = Nave(ai_configuraciones,pantalla)
+    #crea un grupo para almacenar las balas
+    balas = Group()
     
     #color de fondo
 
     while True:
         #bucle de animación del juego
         #eventos y juegos por ejemplo mover el raton, etc
-        fj.verificar_eventos(nave)
+        fj.verificar_eventos(ai_configuraciones,pantalla,balas,nave)
         nave.update()
-        fj.actualizar_pantalla(ai_configuraciones,pantalla,nave)
+        balas.update()
+        fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,balas)
         
 run_game()            
 
