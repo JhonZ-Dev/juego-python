@@ -1,6 +1,5 @@
-from typing import Any
 import pygame 
-from pygame.sprite import _Group, Sprite
+from pygame.sprite import  Sprite
 
 class Bala(Sprite):
     """Esta clase sirve para manejar las balas disparadas desde la nave.
@@ -9,7 +8,7 @@ class Bala(Sprite):
         super(Bala,self).__init__ ()
         self.pantalla = pantalla
         #crea una bala
-        self.rect = pygame.Rect(0,0,ai_configuraciones.bala_Width,ai_configuraciones.bala_height)
+        self.rect = pygame.Rect(0,0,ai_configuraciones.bala_width,ai_configuraciones.bala_height)
         self.rect.centerx = nave.rect.centerx
         self.rect.top = nave.rect.top
         

@@ -10,8 +10,8 @@ class Configuraciones(object):
         
         #configuracion de balas
         self.bala_factor_velocidad =1
-        self.bala.width=3
-        self.bala.height=15
+        self.bala_width=3
+        self.bala_height=15
         self.bala_color=60,60,60
         
         
