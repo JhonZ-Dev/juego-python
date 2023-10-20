@@ -24,6 +24,11 @@ def run_game():
         fj.verificar_eventos(ai_configuraciones,pantalla,nave,balas)
         nave.update()
         balas.update()
+        #deshace las balas que han desaparecido
+        for bala in balas.copy():
+            if bala.rect.bottom <= 0:
+                balas.remove(bala)
+        print(len(balas))
         fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,balas)
         
 run_game()            
