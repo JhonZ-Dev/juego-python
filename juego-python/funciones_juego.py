@@ -1,11 +1,16 @@
 import sys
 import pygame
-def verificar_eventos_keydown(event,nave):
+from bala import Bala
+def verificar_eventos_keydown(event,ai_configuraciones,pantalla, nave,balas):
     """Responde a los pulsaciones de teclas"""
     if event.key == pygame.K_RIGHT:
         nave.moving_rigth=True
     elif event.key == pygame.K_LEFT:
         nave.moving_left = True
+    elif event.key == pygame.K_SPACE:
+        #crea una nueva bala y la agrega
+        nueva_bala = Bala(ai_configuraciones,pantalla,nave)
+        balas.add(nueva_bala)
         
         
 def verificar_eventos_keyup(event,nave):
@@ -16,13 +21,13 @@ def verificar_eventos_keyup(event,nave):
         nave.moving_left = False
         
         
-def verificar_eventos(nave):
+def verificar_eventos(ai_configuraciones,pantalla,nave,balas):
     """Responde a las pulsaciones y teclas"""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
         elif event.type == pygame.KEYDOWN:
-            verificar_eventos_keydown(event,nave)
+            verificar_eventos_keydown(event,ai_configuraciones,pantalla,nave,balas)
             
                     
         elif event.type == pygame.KEYUP:
