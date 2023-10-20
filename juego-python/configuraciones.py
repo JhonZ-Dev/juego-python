@@ -12,6 +12,6 @@ class Configuraciones(object):
         self.bala_factor_velocidad=1
         self.bala_width=3
         self.bala_height=15
-        self.bala_color=60, 60, 60
+        self.bala_color=(60, 60, 60)
         
         
