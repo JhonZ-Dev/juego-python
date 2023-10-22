@@ -14,7 +14,12 @@ def verificar_eventos_keydown(event,ai_configuraciones, pantalla, nave,balas):
         
         
         
-
+def verificar_eventos_keyup(event,nave):
+    """Responde a los pulsaciones de teclas"""
+    if event.key == pygame.K_RIGHT:
+        nave.moving_rigth=False
+    elif event.key == pygame.K_LEFT:
+        nave.moving_left = False
         
         
 def verificar_eventos(ai_configuraciones,pantalla,nave,balas):
