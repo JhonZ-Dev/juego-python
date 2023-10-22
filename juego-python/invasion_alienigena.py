@@ -20,6 +20,8 @@ def run_game():
     
     #crea un alien
     aliens = Group()
+    #creacion de la flota de alienigenas
+    fj.crear_flota(ai_configuraciones,pantalla,aliens)
 
     while True:
         #bucle de animación del juego
@@ -28,7 +30,7 @@ def run_game():
         nave.update()
         fj.update_balas(balas)
         #print(len(balas))
-        fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,alien,balas)
+        fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,aliens,balas)
         
 run_game()            
 
