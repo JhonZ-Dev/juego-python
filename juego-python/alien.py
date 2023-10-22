@@ -1,5 +1,5 @@
 import pygame
-from pygame.sprite import _Group, Sprite
+from pygame.sprite import Sprite
 
 class Alien(Sprite):
     """Sirve para representar a un solo alienigena en la pantalla"""
