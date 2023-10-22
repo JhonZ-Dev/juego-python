@@ -3,7 +3,9 @@ import pygame #crear el juego
 from pygame.sprite import Group
 from configuraciones import Configuraciones
 from nave import Nave
+from alien import Alien
 import funciones_juego as fj
+
 
 def run_game():
     pygame.init()
