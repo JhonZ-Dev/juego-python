@@ -19,7 +19,7 @@ def run_game():
     balas = Group()
     
     #crea un alien
-    alien = Alien(ai_configuraciones,pantalla)
+    aliens = Group()
 
     while True:
         #bucle de animación del juego
