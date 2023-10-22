@@ -18,7 +18,8 @@ def run_game():
     #crea un grupo para almacenar las balas
     balas = Group()
     
-    #color de fondo
+    #crea un alien
+    alien = Alien(ai_configuraciones,pantalla)
 
     while True:
         #bucle de animación del juego
