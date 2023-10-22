@@ -13,5 +13,5 @@ class Alien(Sprite):
          #carga la imagen y obtiene su red
         self.imagen=pygame.image.load("image/alien.bmp")
         self.rect = self.imagen.get_rect()
-        self.pantalla_rect = pantalla.get_rect()
+        #self.pantalla_rect = pantalla.get_rect()
         
