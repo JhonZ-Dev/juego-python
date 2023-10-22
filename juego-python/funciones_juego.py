@@ -53,10 +53,5 @@ def update_balas(balas):
         if bala.rect.bottom <= 0:
             balas.remove(bala)
 
-def fuego_bala(ai_configuraciones,pantalla, nave, balas):
-    """Dispara una vala si aun no ha alncanzado el limite"""
-    #crea una nueva bala y la agrega
-    if len(balas) < ai_configuraciones.balas_allowed:
-        nueva_bala = Bala(ai_configuraciones,pantalla,nave)
-        balas.add(nueva_bala)
+
     
