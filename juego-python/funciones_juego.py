@@ -35,7 +35,14 @@ def verificar_eventos(ai_configuraciones,pantalla,nave,balas):
             verificar_eventos_keyup(event,nave)
             
 
-
+def actualizar_pantalla(ai_configuraciones, pantalla, nave,balas):
+    """Actualiza las imagenes en la pantalla y pasa a la nueva ventana"""
+    pantalla.fill(ai_configuraciones.bg_color)  #aqui se establece el fondo de la pantalla durante cada pasada por el bucle 
+    #vuelve a dibujar todas las balas detras de la nave y los extraterrrestres
+    for bala in balas.sprites():
+        bala.draw_bala()
+    nave.blitme()
+    pygame.display.flip() #haga visible una pantalla mas reciente
 
 
 def update_balas(balas):
