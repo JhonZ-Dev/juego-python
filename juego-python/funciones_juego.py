@@ -1,5 +1,6 @@
 import sys
 import pygame
+from alien import Alien
 from bala import Bala
 def verificar_eventos_keydown(event,ai_configuraciones, pantalla, nave,balas):
     """Responde a los pulsaciones de teclas"""
