@@ -45,7 +45,13 @@ def actualizar_pantalla(ai_configuraciones, pantalla, nave,balas):
     pygame.display.flip() #haga visible una pantalla mas reciente
 
 
-
+def update_balas(balas):
+    """actualiza la posicion de la basla y elimna las antihguas"""
+    #actualiza las posiciones de las balas
+    balas.update()
+    for bala in balas.copy():
+        if bala.rect.bottom <= 0:
+            balas.remove(bala)
 
 def fuego_bala(ai_configuraciones,pantalla, nave, balas):
     """Dispara una vala si aun no ha alncanzado el limite"""
