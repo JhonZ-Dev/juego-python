@@ -18,4 +18,6 @@ class Alien(Sprite):
         self.rect.y = self.rect.height
         #almacena la pocion exacta del alien
         self.x = float(self.rect.x)
-        
+    def blitme(self):
+        """Dibuja el alien en su ubicacion actual"""
+        self.pantalla.blit(self.imagen,self.rect)
