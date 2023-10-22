@@ -1,3 +1,4 @@
 # juego-python
 This project is made in the Python programming language.
-El juego consiste en:
+This Game is: 
+Through a ship that moves from right to left and this same one with the space bar made bullets
