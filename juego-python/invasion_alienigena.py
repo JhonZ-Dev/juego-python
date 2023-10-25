@@ -30,6 +30,7 @@ def run_game():
         nave.update()
         fj.update_balas(balas)
         #print(len(balas))
+        fj.update_aliens(aliens)
         fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,aliens,balas)
         
 run_game()            
