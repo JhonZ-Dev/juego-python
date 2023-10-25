@@ -64,19 +64,30 @@ def fuego_bala(ai_configuraciones,pantalla, nave, balas):
         nueva_bala = Bala(ai_configuraciones,pantalla,nave)
         balas.add(nueva_bala)
 
+def get_number_aliens_x(ai_configuraciones, alien_width):
+    """DETERMINAR EL NUMERO DE ALIENS QUE CABEN EN UNA FILA"""
+    available_space_x = ai_configuraciones.screen_width -2 * alien_width
+    numbers_aliens_x=int( available_space_x /(2*alien_width))
+    return numbers_aliens_x
+def crear_alien(ai_configuraciones, pantalla, aliens,alien_number):
+    """pass"""
+     #crea un alieny lo coloca en la fila
+    alien = Alien(ai_configuraciones,pantalla)
+    alien.x= alien_width+2*alien_width*alien_number
+    alien.rect.x=alien.x
+    aliens.add(alien)
+    
+    
+
 def crear_flota(ai_configuraciones,pantalla,aliens):
     """Crea una floata de aliens"""
     #crea un alien y encuentra el numero de alien  seguido
     #El espcio entre cada alie es igual a un ancho del alien
     alien = Alien(ai_configuraciones,pantalla)
-    alien_width =alien.rect.width
-    available_space_x = ai_configuraciones.screen_width -2 * alien_width
-    numbers_aliens_x=int( available_space_x /(2*alien_width))
+    #alien_width =alien.rect.width
+    numbers_aliens_x=get_number_aliens_x(ai_configuraciones, alien.rect.width)
+    
     #crea la primera fila de aliens
     for alien_number in range(numbers_aliens_x):
-        #crea un alieny lo coloca en la fila
-        alien = Alien(ai_configuraciones,pantalla)
-        alien.x= alien_width+2*alien_width*alien_number
-        alien.rect.x=alien.x
-        aliens.add(alien)
+       
     
