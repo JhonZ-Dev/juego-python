@@ -99,7 +99,7 @@ def crear_flota(ai_configuraciones,pantalla,aliens):
     numbers_rows = get_numbers_rows(ai_configuraciones, nave.rect.height, alien.rect.height)
     
     #crea la flota de aliens
-    for alien_number in range(numbers_aliens_x):
-        crear_alien(ai_configuraciones,pantalla,aliens,alien_number)
+    for row_number in range (numbers_rows):
+        crear_alien(ai_configuraciones,pantalla,aliens,alien_number,row_number)
        
     
