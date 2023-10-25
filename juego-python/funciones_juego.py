@@ -96,6 +96,7 @@ def crear_flota(ai_configuraciones,pantalla,aliens):
     alien = Alien(ai_configuraciones,pantalla)
     #alien_width =alien.rect.width
     numbers_aliens_x=get_number_aliens_x(ai_configuraciones, alien.rect.width)
+    numbers_rows = get_numbers_rows(ai_configuraciones, nave.rect.height, alien.rect.height)
     
     #crea la primera fila de aliens
     for alien_number in range(numbers_aliens_x):
