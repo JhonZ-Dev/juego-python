@@ -90,5 +90,6 @@ def crear_flota(ai_configuraciones,pantalla,aliens):
     
     #crea la primera fila de aliens
     for alien_number in range(numbers_aliens_x):
+        crear_alien(ai_configuraciones,pantalla,aliens,alien_number)
        
     
