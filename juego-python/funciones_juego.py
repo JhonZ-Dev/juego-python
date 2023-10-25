@@ -102,5 +102,9 @@ def crear_flota(ai_configuraciones,pantalla,nave,aliens):
     for row_number in range (numbers_rows):
         for alien_number in range(numbers_aliens_x):
             crear_alien(ai_configuraciones,pantalla,aliens,alien_number,row_number)
+            
+
+def update_aliens(aliens):
+    """actualiza las posiciones de todos los aliens"""
        
     
