@@ -106,5 +106,6 @@ def crear_flota(ai_configuraciones,pantalla,nave,aliens):
 
 def update_aliens(aliens):
     """actualiza las posiciones de todos los aliens"""
+    aliens.update()
        
     
