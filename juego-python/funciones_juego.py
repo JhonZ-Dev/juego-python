@@ -77,13 +77,14 @@ def get_numbers_rows(ai_configuraciones,nave_height,alien_height):
     return numbers_rows
 
 
-def crear_alien(ai_configuraciones, pantalla, aliens,alien_number):
+def crear_alien(ai_configuraciones, pantalla, aliens,alien_number,row_number):
     """pass"""
      #crea un alieny lo coloca en la fila
     alien = Alien(ai_configuraciones,pantalla)
     alien_width = alien.rect.width
     alien.x= alien_width+2*alien_width*alien_number
     alien.rect.x=alien.x
+    alien.rect.y=alien.rect.height+2*alien.rect.height*row_number
     aliens.add(alien)
     
     
