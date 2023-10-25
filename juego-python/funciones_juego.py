@@ -89,7 +89,7 @@ def crear_alien(ai_configuraciones, pantalla, aliens,alien_number,row_number):
     
     
 
-def crear_flota(ai_configuraciones,pantalla,aliens):
+def crear_flota(ai_configuraciones,pantalla,nave,aliens):
     """Crea una floata de aliens"""
     #crea un alien y encuentra el numero de alien  seguido
     #El espcio entre cada alie es igual a un ancho del alien
