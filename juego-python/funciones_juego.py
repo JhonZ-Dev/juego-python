@@ -69,6 +69,14 @@ def get_number_aliens_x(ai_configuraciones, alien_width):
     available_space_x = ai_configuraciones.screen_width -2 * alien_width
     numbers_aliens_x=int( available_space_x /(2*alien_width))
     return numbers_aliens_x
+
+def get_numbers_rows(ai_configuraciones,nave_height,alien_height):
+    """determina el numero de alienigenas por el numero de filas de aliens que se ajustan en la pantalla"""
+    available_space_y = (ai_configuraciones.screen_height - (3*alien_height)-nave_height)
+    numbers_rows = int(available_space_y/(2*alien_height))
+    return numbers_rows
+
+
 def crear_alien(ai_configuraciones, pantalla, aliens,alien_number):
     """pass"""
      #crea un alieny lo coloca en la fila
