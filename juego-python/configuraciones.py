@@ -15,4 +15,7 @@ class Configuraciones(object):
         self.bala_color=(60, 60, 60)
         self.balas_allowed = 3
         
+        #configuracion de los aliens
+        self.alien_speed_factor=1
+        
         
