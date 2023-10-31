@@ -127,7 +127,7 @@ def change_fleet_direction(ai_configuraciones,aliens):
         alien.rect.y += ai_configuraciones.fleet_drop_speed
         ai_configuraciones.fleet_direction *= -1            
 
-def update_aliens(ai_configuraciones,aliens):
+def update_aliens(ai_configuraciones,nave,aliens):
     """actualiza las posiciones de todos los aliens"""
     check_fleet_edges(ai_configuraciones,aliens)
     aliens.update()
