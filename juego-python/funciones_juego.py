@@ -49,7 +49,7 @@ def actualizar_pantalla(ai_configuraciones, pantalla, nave,aliens,balas):
     pygame.display.flip() #haga visible una pantalla mas reciente
 
 
-def update_balas(aliens,balas):
+def update_balas(ai_configuraciones,pantalla,nave,aliens,balas):
     """actualiza la posicion de la basla y elimna las antihguas"""
     #actualiza las posiciones de las balas
     balas.update()
