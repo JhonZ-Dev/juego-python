@@ -56,6 +56,7 @@ def update_balas(ai_configuraciones,pantalla,nave,aliens,balas):
     for bala in balas.copy():
         if bala.rect.bottom <= 0:
             balas.remove(bala)
+    check_bala_alien_colisiones(ai_configuraciones,pantalla,nave,aliens,balas)
     
 
 def check_bala_alien_colisiones(ai_configuraciones,pantalla,nave,aliens,balas):
