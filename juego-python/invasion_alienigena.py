@@ -28,7 +28,7 @@ def run_game():
         #eventos y juegos por ejemplo mover el raton, etc
         fj.verificar_eventos(ai_configuraciones,pantalla,nave,balas)
         nave.update()
-        fj.update_balas(aliens,balas)
+        fj.update_balas(ai_configuraciones,pantalla,nave,aliens,balas)
         #print(len(balas))
         fj.update_aliens(ai_configuraciones,aliens)
         fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,aliens,balas)
