@@ -56,6 +56,9 @@ def update_balas(balas):
     for bala in balas.copy():
         if bala.rect.bottom <= 0:
             balas.remove(bala)
+    #comprueba si hay balas que hayan alcanzado a los aliens
+    #si es asi elimina la bala y el alien
+    collisions = pygame.sprite.groupcollide(balas, aliens, True, True)
 
 def fuego_bala(ai_configuraciones,pantalla, nave, balas):
     """Dispara una vala si aun no ha alncanzado el limite"""
