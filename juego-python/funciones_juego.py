@@ -102,7 +102,19 @@ def crear_flota(ai_configuraciones,pantalla,nave,aliens):
     for row_number in range (numbers_rows):
         for alien_number in range(numbers_aliens_x):
             crear_alien(ai_configuraciones,pantalla,aliens,alien_number,row_number)
-            
+
+def check_fleet_edges(ai_configuraciones,aliens):
+    """Responde apropiadamente si algun alienigena alcanza un borde"""
+    for alien in aliens.sprites():
+        if alien.check_edges():
+            change_fleet_direction(ai_configuraciones,aliens)
+            break
+
+def change_fleet_direction(ai_configuraciones,aliens):
+    """Hace que toda la flota descienda y cambie de direccion"""
+    for alien in aliens.sprites():
+        alien.rect.y += ai_configuraciones.fleet_drop_speed
+    ai_configuraciones.fleet_direction *= -1            
 
 def update_aliens(aliens):
     """actualiza las posiciones de todos los aliens"""
