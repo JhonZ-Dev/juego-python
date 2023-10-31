@@ -118,6 +118,7 @@ def change_fleet_direction(ai_configuraciones,aliens):
 
 def update_aliens(aliens):
     """actualiza las posiciones de todos los aliens"""
+    check_fleet_edges(aliens)
     aliens.update()
        
     
