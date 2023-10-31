@@ -131,5 +131,10 @@ def update_aliens(ai_configuraciones,aliens):
     """actualiza las posiciones de todos los aliens"""
     check_fleet_edges(ai_configuraciones,aliens)
     aliens.update()
+    
+    
+    #busca colisiones de aliens con nave
+    if pygame.sprite.spritecollideany(nave,aliens):
+        print("Nave golpeada")
        
     
