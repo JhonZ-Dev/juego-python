@@ -114,11 +114,11 @@ def change_fleet_direction(ai_configuraciones,aliens):
     """Hace que toda la flota descienda y cambie de direccion"""
     for alien in aliens.sprites():
         alien.rect.y += ai_configuraciones.fleet_drop_speed
-    ai_configuraciones.fleet_direction *= -1            
+        ai_configuraciones.fleet_direction *= -1            
 
-def update_aliens(aliens):
+def update_aliens(ai_configuraciones,aliens):
     """actualiza las posiciones de todos los aliens"""
-    check_fleet_edges(aliens)
+    check_fleet_edges(ai_configuraciones,aliens)
     aliens.update()
        
     
