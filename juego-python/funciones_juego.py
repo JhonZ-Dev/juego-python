@@ -64,6 +64,9 @@ def update_balas(ai_configuraciones,pantalla,nave,aliens,balas):
         balas.empty()
         crear_flota(ai_configuraciones,pantalla,nave,aliens)
 
+def check_bala_alien_colisiones(ai_configuraciones,pantalla,nave,aliens,balas):
+    """Responde a las colisiones entre balas y aliens"""
+
 def fuego_bala(ai_configuraciones,pantalla, nave, balas):
     """Dispara una vala si aun no ha alncanzado el limite"""
     #crea una nueva bala y la agrega

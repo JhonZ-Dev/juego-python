@@ -9,7 +9,7 @@ class Configuraciones(object):
         self.factor_velocidad_nave=1.5 #tiempo pixel del juego
         
         #configuracion de balas
-        self.bala_factor_velocidad = 1
+        self.bala_factor_velocidad = 3
         self.bala_width = 3
         self.bala_height = 15
         self.bala_color=(60, 60, 60)
