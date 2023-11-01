@@ -31,10 +31,13 @@ def run_game():
         #bucle de animación del juego
         #eventos y juegos por ejemplo mover el raton, etc
         fj.verificar_eventos(ai_configuraciones,pantalla,nave,balas)
-        nave.update()
-        fj.update_balas(ai_configuraciones,pantalla,nave,aliens,balas)
-        #print(len(balas))
-        fj.update_aliens(ai_configuraciones,estatadisticas,pantalla,nave,aliens,balas)
+        
+        if estatadisticas.game_active:
+        
+            nave.update()
+            fj.update_balas(ai_configuraciones,pantalla,nave,aliens,balas)
+            #print(len(balas))
+            fj.update_aliens(ai_configuraciones,estatadisticas,pantalla,nave,aliens,balas)
         fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,aliens,balas)
         
 run_game()            
