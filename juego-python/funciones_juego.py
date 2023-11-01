@@ -1,4 +1,5 @@
 import sys
+from time import sleep
 import pygame
 from alien import Alien
 from bala import Bala
