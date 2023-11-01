@@ -12,7 +12,9 @@ def run_game():
     pygame.init()
     ai_configuraciones = Configuraciones()
     pantalla = pygame.display.set_mode((ai_configuraciones.screen_width,ai_configuraciones.screen_height)) #crear ventana de visualización
-    pygame.display.set_caption("Invasion alienigena");
+    pygame.display.set_caption("Invasion alienigena")
+    
+    #crea una instancia para almacenar estadisticas del juego
     
     #crea la nave
     nave = Nave(ai_configuraciones,pantalla)
