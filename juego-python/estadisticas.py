@@ -7,6 +7,4 @@ class Estadistica():
     def reset_stats(self):
         """Inicializa las estaditicas  que pueden cambiar durante el juego """
         #Puntuación máxima
-        self.puntuacion_maxima = 0
-        #Nivel
-        self.nivel = 1
+        self.naves_restantes = self.ai_configuraciones.cantidad_naves
