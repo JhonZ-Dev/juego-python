@@ -15,6 +15,7 @@ def run_game():
     pygame.display.set_caption("Invasion alienigena")
     
     #crea una instancia para almacenar estadisticas del juego
+    estatadisticas= Estadistica(ai_configuraciones)
     
     #crea la nave
     nave = Nave(ai_configuraciones,pantalla)
