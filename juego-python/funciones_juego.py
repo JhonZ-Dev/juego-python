@@ -144,9 +144,9 @@ def nave_golpeada(ai_configuraciones,estadisticas,pantalla,nave,aliens,balas):
     
 def check_aliens_bottom(ai_configuraciones,estadisticas,pantalla,nave,aliens,balas):
     """Chequea si algun alien ha llegado a la parte inferior de la pantalla"""
-    screen_rect = pantalla.get_rect()
+    pantalla_rect = pantalla.get_rect()
     for alien in aliens.sprites():
-        if alien.rect.bottom >= screen_rect.bottom:
+        if alien.rect.bottom >= pantalla_rect.bottom:
             #trata este caso como si la nave hubiera sido golpeada
             nave_golpeada(ai_configuraciones,estadisticas,pantalla,nave,aliens,balas)
             break
