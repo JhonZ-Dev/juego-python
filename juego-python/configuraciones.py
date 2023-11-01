@@ -7,6 +7,7 @@ class Configuraciones(object):
         
     #Configuracion de lña nava}
         self.factor_velocidad_nave=1.5 #tiempo pixel del juego
+        self.cantidad_naves=3 #cantidad de naves
         
         #configuracion de balas
         self.bala_factor_velocidad = 3
