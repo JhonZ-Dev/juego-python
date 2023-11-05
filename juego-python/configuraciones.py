@@ -19,6 +19,9 @@ class Configuraciones(object):
         #configuracion de los aliens
         self.alien_speed_factor=1
         self.fleet_drop_speed=10
+        #que tan rapido se acelera el juego
+        self.escala_aceleracion=1.1
+        self.inicializa_configuraciones_dinamicas()
         self.fleet_direction = 1
         
         
