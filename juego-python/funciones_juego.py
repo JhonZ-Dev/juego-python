@@ -41,7 +41,10 @@ def verificar_eventos(ai_configuraciones,pantalla,estaditicas, play_button,nave,
             mouse_x,mouse_y = pygame.mouse.get_pos()
             check_play_button(estaditicas,play_button,mouse_x,mouse_y)
 
-def check_play_button(estaditicas,play_button,mouse_x,mouse_y)
+def check_play_button(estaditicas,play_button,mouse_x,mouse_y):
+    """Funcion para comenzar un nuevo juego cuando el se da click en play"""
+    if play_button.rect.collidepoint(mouse_x,mouse_y):
+        estaditicas.game_active = True
             
 
 def actualizar_pantalla(ai_configuraciones, pantalla,estadisticas, nave,aliens,balas,play_button):
