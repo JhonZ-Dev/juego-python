@@ -34,7 +34,7 @@ def run_game():
     while True:
         #bucle de animación del juego
         #eventos y juegos por ejemplo mover el raton, etc
-        fj.verificar_eventos(ai_configuraciones,pantalla,nave,balas)
+        fj.verificar_eventos(ai_configuraciones,pantalla,estatadisticas,play_button,nave,balas)
         
         if estatadisticas.game_active:
         
