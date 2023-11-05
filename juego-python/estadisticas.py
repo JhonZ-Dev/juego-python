@@ -5,7 +5,7 @@ class Estadistica():
         self.ai_configuraciones = ai_configuraciones
         self.reset_stats()
         #inicia el juego en un estado activo
-        self.game_active = True
+        self.game_active = False
         
         
         
