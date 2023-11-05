@@ -15,6 +15,9 @@ def run_game():
     pantalla = pygame.display.set_mode((ai_configuraciones.screen_width,ai_configuraciones.screen_height)) #crear ventana de visualización
     pygame.display.set_caption("Invasion alienigena")
     
+    #crea el boton play 
+    play_button = Button(ai_configuraciones,pantalla,"Play")
+    
     #crea una instancia para almacenar estadisticas del juego
     estatadisticas= Estadistica(ai_configuraciones)
     
