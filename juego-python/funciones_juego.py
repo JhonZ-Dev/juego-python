@@ -150,7 +150,7 @@ def change_fleet_direction(ai_configuraciones,aliens):
     """Hace que toda la flota descienda y cambie de direccion"""
     for alien in aliens.sprites():
         alien.rect.y += ai_configuraciones.fleet_drop_speed
-        ai_configuraciones.fleet_direction *= -1            
+    ai_configuraciones.fleet_direction *= -1            
 
 def nave_golpeada(ai_configuraciones,estadisticas,pantalla,nave,aliens,balas):
     """Responde a la nave golpeada por un alien"""
