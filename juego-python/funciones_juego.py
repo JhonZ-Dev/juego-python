@@ -47,6 +47,14 @@ def check_play_button(ai_configuraciones,pantalla, estaditicas,play_button,nave,
         #restablece las estadiscticas del juego
         estaditicas.reset_stats()
         estaditicas.game_active = True
+        
+        #vacia la lista de aliens y balas
+        aliens.empty()
+        balas.empty()
+        
+        #crea una nueva flota y centra la navee
+        crear_flota(ai_configuraciones,pantalla,nave,aliens)
+        nave.centrar_nave()
             
 
 def actualizar_pantalla(ai_configuraciones, pantalla,estadisticas, nave,aliens,balas,play_button):
