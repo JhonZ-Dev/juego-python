@@ -47,6 +47,9 @@ def actualizar_pantalla(ai_configuraciones, pantalla,estadisticas, nave,aliens,b
         bala.draw_bala()
     nave.blitme()
     aliens.draw(pantalla)
+    #dibuja el boton de play si el juego está inactivo
+    if not estadisticas.game_active:
+        play_button.draw_button()
     pygame.display.flip() #haga visible una pantalla mas reciente
 
 
