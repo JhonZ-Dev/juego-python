@@ -26,7 +26,7 @@ def verificar_eventos_keyup(event,nave):
         nave.moving_left = False
         
         
-def verificar_eventos(ai_configuraciones,pantalla,estaditicas, play_button,nave,balas):
+def verificar_eventos(ai_configuraciones,pantalla,estaditicas, play_button,nave,aliens,balas):
     """Responde a las pulsaciones y teclas"""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -39,7 +39,7 @@ def verificar_eventos(ai_configuraciones,pantalla,estaditicas, play_button,nave,
             verificar_eventos_keyup(event,nave)
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x,mouse_y = pygame.mouse.get_pos()
-            check_play_button(estaditicas,play_button,mouse_x,mouse_y)
+            check_play_button(ai_configuraciones,pantalla, estaditicas,play_button,nave,aliens,balas,mouse_x,mouse_y)
 
 def check_play_button(ai_configuraciones,pantalla, estaditicas,play_button,nave,aliens,balas,mouse_x,mouse_y):
     """Funcion para comenzar un nuevo juego cuando el se da click en play"""
