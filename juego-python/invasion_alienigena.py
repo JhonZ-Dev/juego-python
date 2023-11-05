@@ -42,7 +42,7 @@ def run_game():
             fj.update_balas(ai_configuraciones,pantalla,nave,aliens,balas)
             #print(len(balas))
             fj.update_aliens(ai_configuraciones,estatadisticas,pantalla,nave,aliens,balas)
-        fj.actualizar_pantalla(ai_configuraciones,pantalla,nave,aliens,balas)
+        fj.actualizar_pantalla(ai_configuraciones,pantalla,estatadisticas,nave,aliens,balas,play_button)
         
 run_game()            
 
