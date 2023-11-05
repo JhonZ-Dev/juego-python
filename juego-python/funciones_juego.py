@@ -26,7 +26,7 @@ def verificar_eventos_keyup(event,nave):
         nave.moving_left = False
         
         
-def verificar_eventos(ai_configuraciones,pantalla,nave,balas):
+def verificar_eventos(ai_configuraciones,pantalla,estaditicas, play_button,nave,balas):
     """Responde a las pulsaciones y teclas"""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
