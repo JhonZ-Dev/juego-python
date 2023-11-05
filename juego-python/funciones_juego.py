@@ -43,7 +43,8 @@ def verificar_eventos(ai_configuraciones,pantalla,estaditicas, play_button,nave,
 
 def check_play_button(ai_configuraciones,pantalla, estaditicas,play_button,nave,aliens,balas,mouse_x,mouse_y):
     """Funcion para comenzar un nuevo juego cuando el se da click en play"""
-    if play_button.rect.collidepoint(mouse_x,mouse_y):
+    button_clicked = play_button.rect.collidepoint(mouse_x,mouse_y)
+    if button_clicked and not estaditicas.game_active:
         #restablece las estadiscticas del juego
         estaditicas.reset_stats()
         estaditicas.game_active = True
