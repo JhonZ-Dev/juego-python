@@ -45,6 +45,8 @@ def check_play_button(ai_configuraciones,pantalla, estaditicas,play_button,nave,
     """Funcion para comenzar un nuevo juego cuando el se da click en play"""
     button_clicked = play_button.rect.collidepoint(mouse_x,mouse_y)
     if button_clicked and not estaditicas.game_active:
+        #oculta el cursor del mouse
+        pygame.mouse.set_visible(False)
         #restablece las estadiscticas del juego
         estaditicas.reset_stats()
         estaditicas.game_active = True
