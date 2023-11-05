@@ -3,6 +3,7 @@ import pygame #crear el juego
 from pygame.sprite import Group
 from configuraciones import Configuraciones
 from estadisticas import Estadistica
+from button import Button
 from nave import Nave
 
 import funciones_juego as fj
