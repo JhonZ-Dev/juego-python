@@ -39,7 +39,7 @@ def verificar_eventos(ai_configuraciones,pantalla,nave,balas):
             verificar_eventos_keyup(event,nave)
             
 
-def actualizar_pantalla(ai_configuraciones, pantalla, nave,aliens,balas):
+def actualizar_pantalla(ai_configuraciones, pantalla,estadisticas, nave,aliens,balas,play_button):
     """Actualiza las imagenes en la pantalla y pasa a la nueva ventana"""
     pantalla.fill(ai_configuraciones.bg_color)  #aqui se establece el fondo de la pantalla durante cada pasada por el bucle 
     #vuelve a dibujar todas las balas detras de la nave y los extraterrrestres
