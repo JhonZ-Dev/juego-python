@@ -40,7 +40,8 @@ def verificar_eventos(ai_configuraciones,pantalla,estaditicas, play_button,nave,
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x,mouse_y = pygame.mouse.get_pos()
             check_play_button(estaditicas,play_button,mouse_x,mouse_y)
-            
+
+def check_play_button(estaditicas,play_button,mouse_x,mouse_y)
             
 
 def actualizar_pantalla(ai_configuraciones, pantalla,estadisticas, nave,aliens,balas,play_button):
