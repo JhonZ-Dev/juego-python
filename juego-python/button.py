@@ -19,3 +19,8 @@ class Button():
         
         #el mensaje del boton debe prepararse una vez
         self.prep_msg(msg)
+    def prep_msg(self,msg):
+        """Convierte msg en una imagen renderizada y la centra en el boton"""
+        self.msg_image = self.font.render(msg,True,self.text_color,self.button_color)
+        self.msg_image_rect = self.msg_image.get_rect()
+        self.msg_image_rect.center = self.rect.center
