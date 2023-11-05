@@ -21,12 +21,17 @@ class Configuraciones(object):
         #que tan rapido se acelera el juego
         self.escala_aceleracion=1.1
         self.inicializa_configuraciones_dinamicas()
-        self.fleet_direction = 1
+        
     def inicializa_configuraciones_dinamicas(self):
         """Inicializa la configuracion que cambia a lo largo del juego"""
         self.factor_velocidad_nave=1.5 #tiempo pixel del juego
         self.bala_factor_velocidad = 3
         self.alien_speed_factor=1
-               
+        self.fleet_direction = 1
+    def aumentar_velocidad(self):
+        """aumenta la velocidad de juego"""
+        self.factor_velocidad_nave *=self.escala_aceleracion
+        self.bala_factor_velocidad *= self.escala_aceleracion
+        self.alien_speed_factor *= self.escala_aceleracion
         
         
