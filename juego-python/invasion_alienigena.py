@@ -3,6 +3,7 @@ import pygame #crear el juego
 from pygame.sprite import Group
 from configuraciones import Configuraciones
 from estadisticas import Estadistica
+from marcador import Marcador
 from button import Button
 from nave import Nave
 
@@ -18,8 +19,9 @@ def run_game():
     #crea el boton play 
     play_button = Button(ai_configuraciones,pantalla,"Play")
     
-    #crea una instancia para almacenar estadisticas del juego
+    #crea una instancia para almacenar estadisticas del juego y cvrea un maracdor
     estatadisticas= Estadistica(ai_configuraciones)
+    marcador = Marcador(ai_configuraciones,pantalla,estatadisticas)
     
     #crea la nave
     nave = Nave(ai_configuraciones,pantalla)
@@ -39,10 +41,10 @@ def run_game():
         if estatadisticas.game_active:
         
             nave.update()
-            fj.update_balas(ai_configuraciones,pantalla,nave,aliens,balas)
+            fj.update_balas(ai_configuraciones,pantalla,estatadisticas,marcador,nave,aliens,balas)
             #print(len(balas))
             fj.update_aliens(ai_configuraciones,estatadisticas,pantalla,nave,aliens,balas)
-        fj.actualizar_pantalla(ai_configuraciones,pantalla,estatadisticas,nave,aliens,balas,play_button)
+        fj.actualizar_pantalla(ai_configuraciones,pantalla,estatadisticas,marcador,nave,aliens,balas,play_button)
         
 run_game()            
 

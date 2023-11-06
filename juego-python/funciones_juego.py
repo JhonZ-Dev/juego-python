@@ -45,6 +45,8 @@ def check_play_button(ai_configuraciones,pantalla, estaditicas,play_button,nave,
     """Funcion para comenzar un nuevo juego cuando el se da click en play"""
     button_clicked = play_button.rect.collidepoint(mouse_x,mouse_y)
     if button_clicked and not estaditicas.game_active:
+        #Restablece la configuracion del juego
+        ai_configuraciones.inicializa_configuraciones_dinamicas()
         #oculta el cursor del mouse
         pygame.mouse.set_visible(False)
         #restablece las estadiscticas del juego
@@ -60,7 +62,7 @@ def check_play_button(ai_configuraciones,pantalla, estaditicas,play_button,nave,
         nave.centrar_nave()
             
 
-def actualizar_pantalla(ai_configuraciones, pantalla,estadisticas, nave,aliens,balas,play_button):
+def actualizar_pantalla(ai_configuraciones, pantalla,estadisticas,marcador,nave,aliens,balas,play_button):
     """Actualiza las imagenes en la pantalla y pasa a la nueva ventana"""
     pantalla.fill(ai_configuraciones.bg_color)  #aqui se establece el fondo de la pantalla durante cada pasada por el bucle 
     #vuelve a dibujar todas las balas detras de la nave y los extraterrrestres
@@ -68,30 +70,45 @@ def actualizar_pantalla(ai_configuraciones, pantalla,estadisticas, nave,aliens,b
         bala.draw_bala()
     nave.blitme()
     aliens.draw(pantalla)
+    
+    #dibuja la infromacion de la puntacion del juego
+    marcador.muestra_puntaje()
     #dibuja el boton de play si el juego está inactivo
     if not estadisticas.game_active:
         play_button.draw_button()
     pygame.display.flip() #haga visible una pantalla mas reciente
 
 
-def update_balas(ai_configuraciones,pantalla,nave,aliens,balas):
+def update_balas(ai_configuraciones,pantalla,estadisticas,marcador,nave,aliens,balas):
     """actualiza la posicion de la basla y elimna las antihguas"""
     #actualiza las posiciones de las balas
     balas.update()
     for bala in balas.copy():
         if bala.rect.bottom <= 0:
             balas.remove(bala)
-    check_bala_alien_colisiones(ai_configuraciones,pantalla,nave,aliens,balas)
+    check_bala_alien_colisiones(ai_configuraciones,pantalla,estadisticas,marcador,nave,aliens,balas)
     
 
-def check_bala_alien_colisiones(ai_configuraciones,pantalla,nave,aliens,balas):
+def check_bala_alien_colisiones(ai_configuraciones,pantalla,estadisticas,marcador,nave,aliens,balas):
     """Responde a las colisiones entre balas y aliens"""
     #elimina cualquier bala y alien que hayan colisionado
     collisions = pygame.sprite.groupcollide(balas, aliens, True, True)
+    if collisions:
+        for aliens in collisions.values():
+            estadisticas.puntaje += ai_configuraciones.puntos_alien * len(aliens)
+            marcador.prep_puntaje()
+        verificar_alto_puntaje(estadisticas,marcador)
     if len(aliens)==0:
         #elimina las balas existentes y crea una nueva flota
         balas.empty()
+        ai_configuraciones.aumentar_velocidad()
         crear_flota(ai_configuraciones,pantalla,nave,aliens)
+        
+def verificar_alto_puntaje(estadisticas,marcador):
+    """Verifica si existe un puntaje nuevo mas alto"""
+    if estadisticas.puntaje > estadisticas.alto_puntaje:
+        estadisticas.alto_puntaje = estadisticas.puntaje
+        marcador.prep_puntaje_alto()
 
 def fuego_bala(ai_configuraciones,pantalla, nave, balas):
     """Dispara una vala si aun no ha alncanzado el limite"""
